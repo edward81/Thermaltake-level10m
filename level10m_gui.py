@@ -224,9 +224,7 @@ class profileTab(QtGui.QWidget):
         ####################
         dpiContainer = QtGui.QHBoxLayout()
         dpiGroupBox = QtGui.QGroupBox("Dpi")
-        # dpiGroupBox.setAlignment(QtCore.Qt.AlignLeft)
         dpiGroupBox.setLayout(dpiContainer)
-        # dpiGroupBox.setStyleSheet("QGroupBox::title{subcontrol-origin: margin;}")
 
 
         for level in range(0,4):
@@ -238,8 +236,6 @@ class profileTab(QtGui.QWidget):
 
         #############
         colorVbox = QtGui.QVBoxLayout()
-        # colorGroupBox = QtGui.QGroupBox("Lights")
-        # colorGroupBox.setLayout(colorVbox)
 
         colorSx = colorPick(self.profile, 0, "Sx", self.m10, self)
         colorVbox.addWidget(colorSx)
@@ -300,12 +296,11 @@ class maccgui(QtGui.QMainWindow):
         applyBtn.setIcon(self.style().standardIcon(QtGui.QStyle.SP_DialogApplyButton))
         applyBtn.setIconSize(QtCore.QSize(24,24))
         applyBtn.setMaximumSize(QtCore.QSize(32,32))
-        applyBtn.setToolTip('Load profile')
+        applyBtn.setToolTip('Store settin')
         applyBtn.clicked.connect(self.load_profile)
 
         vbox.addWidget(applyBtn)
 
-        # self.setGeometry(300, 300, 500, 770)
         self.setGeometry(300, 300, 500, 170)
         self.setWindowTitle('Thermaltake Level10 M Gui')
         self.show()
